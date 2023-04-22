@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+  box-sizing: border-box;
+
+  color: #222;
+  background: #fff;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+footer {
+  margin-top: auto;
+  border-top: solid;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 2%;
+}
+
+button {
+  cursor: pointer;
+  color: black;
+  background-color: #fff;
+}
+
+label,
+input,
+select {
+  display: inline-block;
+  font-size: 14px;
+}
+
+input {
+  background-color: #fff;
+  color: black;
+}
+
+label {
+  width: 100px;
+  margin-left: 10px;
+}
+
+.submit-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  margin: 2% 2% 0 2%;
+  padding-bottom: 1rem;
+}
+
+/* .save-cancel {
+  display: flex;
+  justify-content: space-between;
+  margin: 2% 2% 0 2%;
+  padding-bottom: 1rem;
+  padding-left: 10px;
+} */
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  margin: 2% 2% 0 2%;
+  padding-bottom: 1rem;
+  border-bottom: solid;
+  padding-left: 10px;
+}
+
+.btn {
+  display: flex;
+  margin-right: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.add,
+.save,
+.cancel,
+.delete {
+  margin-right: 20px;
+}
+
+.delete,
+.save,
+.cancel {
+  margin-top: 6px;
+}
+
+.btn button,
+.btn form button,
+.submit-container button {
+  box-shadow: 3px 3px 1px 1px rgba(255, 255, 255, 0.8);
+  padding: 3px;
+}
+
+.all-products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 60px;
+  padding: 30px;
+  border-radius: 5px;
+  margin: 20px;
+}
+
+.grid-item {
+  border: 1px solid rgb(255, 255, 255);
+  padding: 20px;
+  text-align: center;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* width: 250px;
+  height: 200px; */
+}
+
+.item-checkbox {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.add-product {
+  margin: 2% 2% 0 2%;
+}
+
+.form,
+.margin-bot {
+  margin-bottom: 20px;
+}
+
+.type-dvd,
+.type-book,
+.type-furniture {
+  display: none;
+}
+
+#dvd:checked ~ .type-dvd,
+#book:checked ~ .type-book,
+#furniture:checked ~ .type-furniture {
+  display: inline-block;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 1200px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+  }
+
+  .head {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .btn {
+    margin-top: 20px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  * {
+    color: #eee;
+    background: #121212;
+  }
+}
